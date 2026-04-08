@@ -1,0 +1,18 @@
+name: CI Demo
+
+on: [push]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Greeting
+        run: echo "Hello from GitHub Actions CI"
+
+      - name: Intentional Failure
+        run: |
+          echo "This step will fail on purpose"
+          exit 1
