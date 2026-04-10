@@ -12,7 +12,5 @@ jobs:
       - name: Greeting
         run: echo "Hello from GitHub Actions CI"
 
-      - name: Intentional Failure
-        run: |
-          echo "This step will fail on purpose"
-          exit 1
+      - name: Success Check
+        run: echo "All steps passed successfully"
